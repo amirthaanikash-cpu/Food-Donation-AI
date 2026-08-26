@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Smart Food Donation System | donate</title>
+
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/donate.css">
+<link rel="stylesheet" href="css/layout-fix.css">
+<link rel="stylesheet" href="css/assistant.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+    <img src="images/logo.png" alt="Smart Food Donation AI Logo">
+
+    <div class="logo-text">
+
+        <h2>Smart Food Donation AI</h2>
+
+        <p>AI Powered Platform</p>
+
+    </div>
+
+</div>
+
+        <ul class="menu">
+
+            <li onclick="window.location.href='dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </li>
+
+            <li class="active">
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+<span>Donate Food</span>
+
+</li>
+
+            <li>
+
+                <i class="fa-solid fa-box"></i>
+
+                <span>My Donations</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-building"></i>
+
+                <span>Nearby NGOs</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-truck"></i>
+
+                <span>Volunteers</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>AI Assistant</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Reports</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </li>
+
+        </ul>
+<div class="sidebar-user">
+
+    <img src="images/user1.png" alt="User">
+
+    <div>
+
+        <h4 id="sidebarUserName">User</h4>
+
+        <p>🟢 Online</p>
+
+    </div>
+
+</div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+        <header class="topbar">
+
+    <!-- Search -->
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            placeholder="Search donations, NGOs, volunteers...">
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="topbar-right">
+
+        <!-- Notification -->
+
+       <!-- Notification -->
+<div class="notification-container">
+
+    <button id="notificationBtn" class="icon-button">
+
+        <i class="fa-solid fa-bell"></i>
+
+        <span class="notification-count">4</span>
+
+    </button>
+
+    <div id="notificationMenu" class="notification-menu">
+
+        <div class="notification-header">
+
+            <h3>Notifications</h3>
+
+            <span class="new-count">4 New</span>
+
+        </div>
+
+        <div class="notification-body">
+
+            <div class="notification-item">
+
+                <div class="notification-icon">📦</div>
+
+                <div>
+
+                    <h4>Donation Accepted</h4>
+
+                    <p>Your food donation was accepted.</p>
+
+                    <small>2 minutes ago</small>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <div class="notification-icon">🚚</div>
+
+                <div>
+
+                    <h4>Volunteer Assigned</h4>
+
+                    <p>Rahul will collect your donation.</p>
+
+                    <small>10 minutes ago</small>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <div class="notification-icon">🤖</div>
+
+                <div>
+
+                    <h4>AI Verification</h4>
+
+                    <p>Your food has passed the safety check.</p>
+
+                    <small>Today</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="view-all-btn">
+
+            View All Notifications
+
+        </button>
+
+    </div>
+
+</div>
+        <!-- Dark Mode -->
+
+       <button id="themeBtn" class="icon-button">
+
+    <i id="themeIcon" class="fa-solid fa-moon"></i>
+
+</button>
+
+        <!-- Profile -->
+<div class="profile-container">
+
+    <div id="profileBtn" class="profile-button">
+
+        <img src="images/user1.png" alt="User">
+
+        <div class="profile-text">
+            <h4 id="userName">TestUser</h4>
+            <p id="userRole">Donor</p>
+        </div>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </div>
+
+    <div id="profileMenu" class="profile-menu">
+
+    <div class="profile-menu-header">
+
+        <img src="images/user1.png" alt="User">
+
+        <div>
+
+            <h3 id="profileName">TestUser</h3>
+
+            <p id="profileRole">Donor</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <a href="#">
+        <i class="fa-solid fa-user"></i>
+        My Profile
+    </a>
+
+    <a href="#">
+        <i class="fa-solid fa-gear"></i>
+        Settings
+    </a>
+
+    <a href="#">
+        <i class="fa-solid fa-bell"></i>
+        Notifications
+    </a>
+
+    <a href="#">
+        <i class="fa-solid fa-circle-question"></i>
+        Help Center
+    </a>
+
+    <hr>
+
+    <a href="#" id="logoutBtn" class="logout">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+    </a>
+
+</div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="container">
+
+<header>
+
+<h1>
+
+🍱 Donate Food
+
+</h1>
+
+<p>
+
+Help someone today by donating surplus food.
+
+</p>
+
+</header>
+
+<form id="donateForm">
+    <div class="form-grid">
+    <!-- Food Name -->
+
+<div class="input-group">
+
+    <label>Food Name</label>
+
+    <div class="input-icon">
+
+        <i class="fa-solid fa-bowl-food"></i>
+
+        <input
+            type="text"
+            id="foodName"
+            placeholder="Example : Vegetable Rice">
+
+    </div>
+
+</div>
+
+<!-- Food Category -->
+<div class="input-group">
+
+    <label>Food Category</label>
+
+    <div class="input-icon">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <select id="foodCategory">
+
+    <option value="">Select Category</option>
+    <option value="Veg">Veg</option>
+    <option value="Non Veg">Non Veg</option>
+    <option value="Bakery">Bakery</option>
+    <option value="Fruits">Fruits</option>
+
+</select>
+
+    </div>
+
+</div>
+
+</div>
+<!-- Quantity -->
+<div class="input-group full-width">
+    <label for="quantity">
+        <i class="fa-solid fa-users"></i>
+        Quantity (Persons)
+    </label>
+
+    <input
+        type="number"
+        id="quantity"
+        min="1"
+        placeholder="Number of persons"
+        required>
+</div>
+<!-- Prepared Date & Time -->
+<div class="input-group">
+
+    <label>
+        Prepared Date & Time
+    </label>
+
+    <div class="datetime-box">
+
+        <div class="date-box">
+            <i class="fa-solid fa-calendar"></i>
+
+            <input
+                type="date"
+                id="preparedDate"
+                required>
+        </div>
+
+        <div class="time-box">
+            <i class="fa-solid fa-clock"></i>
+
+            <input
+                type="time"
+                id="preparedTime"
+                required>
+        </div>
+
+        <select
+            id="preparedPeriod"
+            class="period-select">
+
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+<!-- Expiry Date & Time -->
+<div class="input-group">
+
+    <label>
+        Expiry Date & Time
+    </label>
+
+    <div class="datetime-box">
+
+        <div class="date-box">
+            <i class="fa-solid fa-calendar"></i>
+
+            <input
+                type="date"
+                id="expiryDate"
+                required>
+        </div>
+
+        <div class="time-box">
+            <i class="fa-solid fa-hourglass-end"></i>
+
+            <input
+                type="time"
+                id="expiryTime"
+                required>
+        </div>
+
+        <select
+            id="expiryPeriod"
+            class="period-select">
+
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+
+        </select>
+
+    </div>
+
+</div>
+<!-- Paste below this line -->
+<div class="input-group full-width">
+    <label for="storage">
+        <i class="fa-solid fa-snowflake"></i>
+        Storage Condition
+    </label>
+
+    <select id="storage" required>
+        <option value="">Select Storage</option>
+        <option value="Room Temperature">Room Temperature</option>
+        <option value="Refrigerated">Refrigerated</option>
+        <option value="Frozen">Frozen</option>
+    </select>
+</div>
+
+    </div>
+<!-- Pickup Address -->
+
+<div class="input-group">
+
+<label>
+
+Pickup Address
+
+</label>
+
+<textarea
+id="address"
+rows="4"
+placeholder="Enter complete pickup address"
+required>
+
+</textarea>
+
+</div>
+
+<!-- Food Image -->
+
+<div class="input-group">
+
+<label>
+
+Upload Food Image
+
+</label>
+
+<input
+type="file"
+id="foodImage"
+accept="image/*">
+
+<img
+    id="previewImage"
+    alt="Food Preview">
+</div>
+<!-- ==========================================
+            AI FOOD ANALYSIS
+========================================== -->
+
+<div class="ai-analysis">
+
+    <h2>
+
+        🤖 AI Food Safety Analysis
+
+    </h2>
+
+    <div class="analysis-grid">
+
+        <div class="analysis-card">
+
+            <h3>
+
+                Freshness
+
+            </h3>
+
+            <h1 id="freshness">
+
+                0%
+
+            </h1>
+
+        </div>
+
+        <div class="analysis-card">
+
+            <h3>
+
+                Food Status
+
+            </h3>
+
+            <h1 id="foodStatus">
+
+                Waiting...
+
+            </h1>
+
+        </div>
+
+        <div class="analysis-card">
+
+            <h3>
+
+                Recommendation
+
+            </h3>
+
+            <p id="recommendation">
+
+                Select preparation and expiry time.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==========================================
+     PICKUP LOCATION
+========================================== -->
+
+<div class="map-section">
+
+    <h2>
+        📍 Select Pickup Location
+    </h2>
+
+    <p>
+        Search your pickup location or select it directly on the map.
+    </p>
+
+    <!-- ADDRESS SEARCH -->
+
+    <div class="location-search">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <input
+            type="text"
+            id="locationSearch"
+            placeholder="Enter pickup address">
+
+        <button
+            type="button"
+            id="searchLocationBtn">
+            Search
+        </button>
+
+    </div>
+
+
+    <!-- MAP -->
+
+    <div id="map"></div>
+
+
+    <!-- LATITUDE + LONGITUDE -->
+
+    <div class="location-fields">
+
+        <div class="coordinate-box">
+
+            <i class="fa-solid fa-location-crosshairs"></i>
+
+            <input
+                type="text"
+                id="latitude"
+                placeholder="Latitude"
+                readonly>
+
+        </div>
+
+
+        <div class="coordinate-box">
+
+            <i class="fa-solid fa-location-crosshairs"></i>
+
+            <input
+                type="text"
+                id="longitude"
+                placeholder="Longitude"
+                readonly>
+
+        </div>
+
+    </div>
+
+
+    <!-- CURRENT LOCATION -->
+
+    <button
+        type="button"
+        id="currentLocationBtn"
+        class="location-btn">
+
+        <i class="fa-solid fa-location-crosshairs"></i>
+
+        Use My Current Location
+
+    </button>
+
+</div>
+
+
+ <!-- Submit -->
+
+<button
+class="submit-btn"
+type="submit">
+
+Donate Food
+
+</button>
+
+</form>
+</main>
+</div>
+
+<!-- Floating AI Button -->
+<button class="floating-ai">
+    <i class="fa-solid fa-robot"></i>
+</button>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/donate.js"></script>
+<script src="js/assistant.js"></script>
+
+</body>
+</html>

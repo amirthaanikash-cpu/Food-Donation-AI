@@ -1,0 +1,506 @@
+/* ==========================================
+   FINAL PAGE ALIGNMENT FIX
+   Smart Food Donation AI - Donate Food Page
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   REMOVE DEFAULT PAGE SPACING
+========================================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   MAIN DASHBOARD STRUCTURE
+========================================== */
+
+.dashboard {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   FIXED SIDEBAR
+========================================== */
+
+.sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 270px !important;
+    height: 100vh !important;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content {
+    margin-left: 270px !important;
+
+    width: calc(100% - 270px) !important;
+
+    min-width: 0 !important;
+    min-height: 100vh;
+
+    padding: 30px !important;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden !important;
+}
+
+
+/* ==========================================
+   ALL MAIN CHILDREN
+========================================== */
+
+.main-content > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin-left: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   TOPBAR
+========================================== */
+
+.topbar {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 0 30px 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   MAIN DONATION CONTAINER
+========================================== */
+
+.container {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 30px !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+#donateForm {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+.form-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================
+   AI FOOD ANALYSIS
+========================================== */
+
+.ai-analysis {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin: 30px 0 !important;
+
+    padding: 30px !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+.analysis-grid {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+.analysis-card {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PICKUP LOCATION SECTION
+========================================== */
+
+.map-section {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin: 30px 0 !important;
+
+    padding: 30px !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   LOCATION SEARCH
+========================================== */
+
+.location-search {
+    width: 100% !important;
+
+    display: flex !important;
+
+    align-items: stretch;
+
+    margin: 20px 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+.location-search input {
+    flex: 1 !important;
+
+    min-width: 0 !important;
+
+    width: auto !important;
+}
+
+
+.location-search button {
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   MAP
+========================================== */
+
+#map {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: 400px !important;
+    border-radius: 15px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   LATITUDE + LONGITUDE
+========================================== */
+
+.location-fields {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr) !important;
+
+    gap: 16px !important;
+
+    margin-top: 16px !important;
+
+    box-sizing: border-box;
+}
+
+
+.coordinate-box {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: 54px;
+
+    display: flex !important;
+
+    align-items: center;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+.coordinate-box input {
+    flex: 1 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   CURRENT LOCATION BUTTON
+========================================== */
+
+#currentLocationBtn {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: 54px;
+
+    margin: 16px 0 0 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   DONATE BUTTON
+========================================== */
+
+#donateBtn {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px !important;
+    }
+
+    .main-content {
+        margin-left: 220px !important;
+
+        width: calc(100% - 220px) !important;
+
+        padding: 20px !important;
+    }
+
+    .analysis-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 100% !important;
+        position: relative !important;
+        height: auto !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+
+        width: 100% !important;
+
+        padding: 15px !important;
+    }
+
+    .container,
+    .ai-analysis,
+    .map-section {
+        padding: 20px !important;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .analysis-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .location-fields {
+        grid-template-columns: 1fr !important;
+    }
+
+    #map {
+        height: 320px !important;
+    }
+}
+/* ==========================================
+   GREEN LATITUDE & LONGITUDE BOX DESIGN
+========================================== */
+
+.coordinate-box {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 56px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 0 18px !important;
+
+    background: #ffffff !important;
+
+    border: 2px solid #bfe9d1 !important;
+
+    border-radius: 12px !important;
+
+    box-shadow: 0 4px 12px rgba(31, 154, 82, 0.08) !important;
+
+    transition: all 0.3s ease;
+
+    box-sizing: border-box !important;
+}
+
+
+/* LOCATION ICON */
+
+.coordinate-box i {
+    color: #1f9a52 !important;
+
+    font-size: 17px !important;
+
+    margin-right: 10px !important;
+
+    flex-shrink: 0;
+}
+
+
+/* LATITUDE & LONGITUDE TEXT */
+
+.coordinate-box input {
+    flex: 1 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: 100% !important;
+
+    border: none !important;
+
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #23402f !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 15px !important;
+
+    padding: 0 !important;
+
+    box-shadow: none !important;
+}
+
+
+/* PLACEHOLDER */
+
+.coordinate-box input::placeholder {
+    color: #6d7f73 !important;
+
+    opacity: 1;
+}
+
+
+/* GREEN HOVER EFFECT */
+
+.coordinate-box:hover {
+    border-color: #1f9a52 !important;
+
+    box-shadow: 0 6px 18px rgba(31, 154, 82, 0.12) !important;
+}

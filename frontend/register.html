@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Food Donation System | Register</title>
+
+    <link rel="stylesheet"
+          href="css/register.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===============================
+        BACKGROUND
+================================ -->
+
+<div class="background">
+
+    <div class="circle circle1"></div>
+
+    <div class="circle circle2"></div>
+
+    <div class="circle circle3"></div>
+
+</div>
+
+<!-- ===============================
+        REGISTER CONTAINER
+================================ -->
+
+<div class="register-container">
+    <!-- ===============================
+        LEFT PANEL
+================================ -->
+
+<div class="register-left">
+
+    <img src="images/logo.png"
+         class="logo"
+         alt="Logo">
+
+    <h1>Smart Food Donation System AI</h1>
+
+    <p>
+
+        Join our smart food donation community and help
+        reduce food waste using Artificial Intelligence.
+
+    </p>
+
+    <img src="images/register.png"
+         class="hero-image"
+         alt="Register">
+
+</div>
+
+<!-- ===============================
+        RIGHT PANEL
+================================ -->
+
+<div class="register-right">
+
+    <h2>Create Account</h2>
+
+    <p>
+
+        Register and become a part of Smart Food Donation System AI.
+
+    </p>
+
+<form id="registerForm">
+    <!-- ==========================================
+            FULL NAME
+========================================== -->
+
+<div class="input-box">
+
+    <i class="fa-solid fa-user"></i>
+
+    <input
+type="text"
+id="name">
+</div>
+
+<!-- ==========================================
+            EMAIL
+========================================== -->
+
+<div class="input-box">
+
+    <i class="fa-solid fa-envelope"></i>
+
+   <input
+type="email"
+id="email">
+
+</div>
+
+<!-- ==========================================
+            PHONE
+========================================== -->
+
+<div class="input-box">
+
+    <i class="fa-solid fa-phone"></i>
+
+    <input
+        type="tel"
+        id="phone"
+        placeholder="Phone Number"
+        maxlength="10"
+        required>
+
+</div>
+
+<!-- ==========================================
+            PASSWORD
+========================================== -->
+
+<div class="input-box">
+
+    <i class="fa-solid fa-lock"></i>
+
+   <input
+type="password"
+id="password">
+
+    <button
+        type="button"
+        class="show-password">
+
+        <i class="fa-solid fa-eye"></i>
+
+    </button>
+
+</div>
+
+<!-- ==========================================
+        CONFIRM PASSWORD
+========================================== -->
+
+<div class="input-box">
+
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm Password"
+        required>
+
+</div>
+
+<!-- ==========================================
+            ROLE SELECTION
+========================================== -->
+
+<h3 class="role-title">
+
+    Select Your Role
+
+</h3>
+
+<div class="role-selection">
+
+    <label>
+
+       <input
+type="radio"
+name="role"
+value="donor">
+
+        <span>
+
+            <i class="fa-solid fa-hand-holding-heart"></i>
+
+            Donor
+
+        </span>
+
+    </label>
+
+    <label>
+
+        <input
+            type="radio"
+            name="role"
+            value="ngo">
+
+        <span>
+
+            <i class="fa-solid fa-building"></i>
+
+            NGO
+
+        </span>
+
+    </label>
+
+    <label>
+
+        <input
+            type="radio"
+            name="role"
+            value="volunteer">
+
+        <span>
+
+            <i class="fa-solid fa-truck"></i>
+
+            Volunteer
+
+        </span>
+
+    </label>
+
+</div>
+<!-- ==========================================
+            ADDRESS DETAILS
+========================================== -->
+
+<h3 class="section-title">
+
+    Address Details
+
+</h3>
+
+<div class="input-box">
+
+    <i class="fa-solid fa-location-dot"></i>
+
+    <input
+        type="text"
+        id="state"
+        placeholder="State"
+        required>
+
+</div>
+
+<div class="input-box">
+
+    <i class="fa-solid fa-map"></i>
+
+    <input
+        type="text"
+        id="district"
+        placeholder="District"
+        required>
+
+</div>
+
+<div class="input-box">
+
+    <i class="fa-solid fa-city"></i>
+
+    <input
+        type="text"
+        id="city"
+        placeholder="City"
+        required>
+
+</div>
+
+<div class="input-box">
+
+    <i class="fa-solid fa-mail-bulk"></i>
+
+    <input
+        type="text"
+        id="pincode"
+        placeholder="Pincode"
+        maxlength="6"
+        required>
+
+</div>
+
+<div class="input-box">
+
+    <i class="fa-solid fa-house"></i>
+
+    <textarea
+        id="address"
+        placeholder="Full Address"
+        rows="3"
+        required></textarea>
+
+</div>
+
+<!-- ==========================================
+            DONOR DETAILS
+========================================== -->
+
+<div id="donorFields">
+
+<h3 class="section-title">
+
+    Donor Information
+
+</h3>
+
+<select id="donorType">
+
+    <option value="">Select Donor Type</option>
+
+    <option>Home</option>
+
+    <option>Restaurant</option>
+
+    <option>Hotel</option>
+
+    <option>Marriage Hall</option>
+
+    <option>Event Organizer</option>
+
+</select>
+
+</div>
+
+<!-- ==========================================
+            NGO DETAILS
+========================================== -->
+
+<div id="ngoFields" style="display:none;">
+
+<h3 class="section-title">
+
+    NGO Details
+
+</h3>
+
+<div class="input-box">
+
+    <i class="fa-solid fa-building"></i>
+
+    <input
+        type="text"
+        placeholder="NGO Name">
+
+</div>
+
+<div class="input-box">
+
+    <i class="fa-solid fa-id-card"></i>
+
+    <input
+        type="text"
+        placeholder="Registration Number">
+
+</div>
+
+<label class="upload-label">
+
+    Upload NGO Registration Certificate
+
+</label>
+
+<input
+    type="file"
+    accept=".pdf,.jpg,.jpeg,.png">
+
+</div>
+
+<!-- ==========================================
+            VOLUNTEER DETAILS
+========================================== -->
+
+<div id="volunteerFields" style="display:none;">
+
+<h3 class="section-title">
+
+    Volunteer Information
+
+</h3>
+
+<select id="vehicle">
+
+    <option value="">Vehicle Available?</option>
+
+    <option>Bike</option>
+
+    <option>Car</option>
+
+    <option>Van</option>
+
+    <option>No Vehicle</option>
+
+</select>
+
+<label class="upload-label">
+
+    Upload Driving License
+
+</label>
+
+<input
+    type="file"
+    accept=".jpg,.jpeg,.png,.pdf">
+
+</div>
+<!-- ==========================================
+            TERMS & REGISTER
+========================================== -->
+
+<div class="terms">
+
+<label>
+
+<input
+    type="checkbox"
+    required>
+
+I agree to the Terms & Conditions
+
+</label>
+
+</div>
+
+<button
+    type="submit"
+    class="register-button">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Create Account
+
+</button>
+
+<p class="login-text">
+
+Already have an account?
+
+<a href="login.html">
+
+Login Here
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="js/register.js"></script>
+
+</body>
+
+</html>

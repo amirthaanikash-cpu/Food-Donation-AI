@@ -1,0 +1,127 @@
+body{
+
+font-family:Poppins,sans-serif;
+
+background:linear-gradient(to right,#f1fff4,#ffffff);
+
+margin:0;
+
+padding:30px;
+
+}
+
+.container{
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    color:#15803d;
+    font-size:38px;
+}
+
+header p{
+    color:#666;
+    font-size:17px;
+}
+
+#donationContainer{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:20px;
+
+}
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.card h2{
+
+color:#16a34a;
+
+margin-bottom:10px;
+
+}
+
+.card p{
+
+margin:8px 0;
+
+}
+
+button{
+
+margin-top:15px;
+
+background:#16a34a;
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+width:100%;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+button:hover{
+    background:#15803d;
+}
+.status{
+
+background:#16a34a;
+
+color:white;
+
+padding:4px 10px;
+
+border-radius:20px;
+
+font-size:13px;
+
+font-weight:bold;
+
+}
+
+.accept-btn:hover{
+
+background:#15803d;
+
+}
+
+.card{
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}

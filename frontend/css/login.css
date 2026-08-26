@@ -1,0 +1,677 @@
+/*==========================================================
+                SMART FOOD DONATION AI LOGIN
+==========================================================*/
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+
+    --primary:#16a34a;
+    --secondary:#22c55e;
+    --light:#dcfce7;
+    --white:#ffffff;
+    --dark:#0f172a;
+    --gray:#64748b;
+
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#ecfdf5;
+
+    overflow:auto;
+
+    position:relative;
+
+}
+
+/*==========================================================
+                BACKGROUND
+==========================================================*/
+
+.background{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-2;
+
+}
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    opacity:.45;
+
+}
+
+.circle1{
+
+    width:350px;
+
+    height:350px;
+
+    background:#22c55e;
+
+    left:-100px;
+
+    top:-100px;
+
+}
+
+.circle2{
+
+    width:350px;
+
+    height:350px;
+
+    background:#bbf7d0;
+
+    right:-100px;
+
+    bottom:-100px;
+
+}
+
+.circle3{
+
+    width:250px;
+
+    height:250px;
+
+    background:#4ade80;
+
+    left:45%;
+
+    top:35%;
+
+}
+
+/*==========================================================
+                CARD
+==========================================================*/
+
+.login-container{
+
+    width:1180px;
+
+    max-width:95%;
+
+    height:700px;
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+/*==========================================================
+                LEFT SIDE
+==========================================================*/
+
+.login-left{
+
+    width:45%;
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+.logo{
+
+    width:140px;
+
+    margin-bottom:25px;
+
+}
+
+.login-left h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.login-left p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.hero-image{
+
+    width:340px;
+
+    max-width:100%;
+
+    animation:floatImage 4s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==========================================================
+                RIGHT SIDE
+==========================================================*/
+
+.login-right{
+
+    width:55%;
+
+    padding:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.login-right h2{
+
+    font-size:36px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+.login-right>p{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+}
+/*==========================================================
+                LOGIN FORM
+==========================================================*/
+
+#loginForm{
+
+    width:100%;
+
+}
+
+/*==========================================================
+                ROLE SELECTION
+==========================================================*/
+
+.role-selection{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.role-selection input{
+
+    display:none;
+
+}
+
+.role-selection label{
+
+    cursor:pointer;
+
+}
+
+.role-selection span{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    height:55px;
+
+    border:2px solid #e2e8f0;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.role-selection span:hover{
+
+    border-color:var(--primary);
+
+    background:#f0fdf4;
+
+}
+
+.role-selection input:checked + span{
+
+    background:var(--primary);
+
+    color:white;
+
+    border-color:var(--primary);
+
+}
+
+/*==========================================================
+                INPUT BOX
+==========================================================*/
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:20px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:55px;
+
+    border:2px solid #dbeafe;
+
+    border-radius:12px;
+
+    padding-left:50px;
+
+    padding-right:50px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 10px rgba(34,197,94,.2);
+
+}
+
+.input-box i{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#64748b;
+
+}
+
+.show-password{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#64748b;
+
+    font-size:18px;
+
+}
+/*==========================================================
+                LOGIN OPTIONS
+==========================================================*/
+
+.login-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:20px 0;
+
+    font-size:14px;
+
+}
+
+.login-options a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/*==========================================================
+                BUTTONS
+==========================================================*/
+
+.login-button{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 25px rgba(34,197,94,.25);
+
+}
+
+.divider{
+
+    margin:25px 0;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:1px;
+
+    background:#e2e8f0;
+
+    left:0;
+
+    top:50%;
+
+}
+
+.divider span{
+
+    background:white;
+
+    padding:0 15px;
+
+    position:relative;
+
+}
+
+.google-button{
+
+    width:100%;
+
+    height:55px;
+
+    border:2px solid #e2e8f0;
+
+    background:white;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.google-button:hover{
+
+    background:#f8fafc;
+
+    border-color:var(--primary);
+
+}
+
+.google-button i{
+
+    color:#EA4335;
+
+    margin-right:10px;
+
+}
+/*==========================================================
+                FOOTER
+==========================================================*/
+
+.register-text{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#64748b;
+
+}
+
+.register-text a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.register-text a:hover{
+
+    text-decoration:underline;
+
+}
+
+.login-footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+.login-footer p{
+
+    margin-top:5px;
+
+}
+
+/*==========================================================
+                RESPONSIVE
+==========================================================*/
+
+@media(max-width:900px){
+
+.login-container{
+
+    flex-direction:column;
+
+    height:auto;
+
+}
+
+.login-left{
+
+    width:100%;
+
+    padding:40px;
+
+}
+
+.login-right{
+
+    width:55%;
+
+    padding:70px 60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+.hero-image{
+
+    width:300px;
+
+    max-width:100%;
+
+}
+
+.role-selection{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+.login-container{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+   <header class="dashboard-header">
+
+    <div>
+
+        <h1>🛠 Smart Food Donation System</h1>
+
+        <p>
+
+            Monitor donations, AI analysis, NGOs, volunteers and reports.
+
+        </p>
+
+    </div>
+
+    <div class="admin-profile">
+
+        <h3>Administrator</h3>
+
+        <span>System Dashboard</span>
+
+    </div>
+
+</header>
+
+    <!-- ============================= -->
+    <!-- DASHBOARD CARDS -->
+    <!-- ============================= -->
+<h2 class="section-title">
+
+📊 Dashboard Statistics
+
+</h2>
+    <div class="cards">
+
+        <div class="card">
+            <h2 id="users">0</h2>
+            <p>Total Users</p>
+        </div>
+
+        <div class="card">
+            <h2 id="donations">0</h2>
+            <p>Total Donations</p>
+        </div>
+
+        <div class="card">
+            <h2 id="waiting">0</h2>
+            <p>Waiting</p>
+        </div>
+
+        <div class="card">
+            <h2 id="accepted">0</h2>
+            <p>Accepted</p>
+        </div>
+
+        <div class="card">
+            <h2 id="picked">0</h2>
+            <p>Picked</p>
+        </div>
+
+        <div class="card">
+            <h2 id="delivered">0</h2>
+            <p>Delivered</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- ============================= -->
+    <!-- RECENT DONATIONS -->
+    <!-- ============================= -->
+
+   <h2 class="section-title">
+
+🍱 Recent Donations
+
+</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Food</th>
+
+                <th>Category</th>
+
+                <th>Freshness</th>
+
+                <th>AI Result</th>
+
+                <th>Recommendation</th>
+
+                <th>Status</th>
+
+                <th>Donor</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="recentData">
+
+        </tbody>
+
+    </table>
+<div class="charts">
+
+    <div class="chart-card">
+
+       <h2>
+
+📈 Donation Status
+
+</h2>
+
+        <canvas id="statusChart"></canvas>
+
+    </div>
+
+    <div class="chart-card">
+
+       <h2>
+
+🥗 Food Categories
+
+</h2>
+
+        <canvas id="categoryChart"></canvas>
+
+    </div>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/admin.js"></script>
+<script src="js/auth.js"></script>
+
+<script>
+
+checkRole("admin");
+
+</script>
+</body>
+</html>

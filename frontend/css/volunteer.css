@@ -1,0 +1,301 @@
+/*=========================================
+        GOOGLE FONT & RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#ecfdf5,#ffffff);
+
+    min-height:100vh;
+
+    padding:35px;
+
+    color:#0f172a;
+
+}
+
+/*=========================================
+            CONTAINER
+=========================================*/
+
+.container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/*=========================================
+            HEADER
+=========================================*/
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+header h1{
+
+    color:#16a34a;
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+header p{
+
+    margin-top:8px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+}
+
+/*=========================================
+            TASK BOX
+=========================================*/
+
+.status-box{
+
+    background:white;
+
+    width:180px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+.status-box h3{
+
+    color:#64748b;
+
+    font-size:15px;
+
+}
+
+.status-box span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:34px;
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+            CARD GRID
+=========================================*/
+
+#volunteerContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:25px;
+
+}
+
+/*=========================================
+            CARD
+=========================================*/
+
+.card{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.5);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 35px rgba(22,163,74,.18);
+
+}
+
+/*=========================================
+            CARD TITLE
+=========================================*/
+
+.card h2{
+
+    color:#16a34a;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    margin:10px 0;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+.card b{
+
+    color:#0f172a;
+
+}
+
+/*=========================================
+            STATUS BADGE
+=========================================*/
+
+.status{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+            BUTTONS
+=========================================*/
+
+.pick-btn,
+.deliver-btn{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.pick-btn{
+
+    margin-top:20px;
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+}
+
+.pick-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(22,163,74,.25);
+
+}
+
+.deliver-btn{
+
+    margin-top:12px;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+}
+
+.deliver-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(59,130,246,.25);
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.status-box{
+
+    width:100%;
+
+}
+
+#volunteerContainer{
+
+    grid-template-columns:1fr;
+
+}
+
+}

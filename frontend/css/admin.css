@@ -1,0 +1,286 @@
+/*=========================================
+            RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#f4f8fb;
+
+    color:#1e293b;
+
+    padding:30px;
+
+}
+
+/*=========================================
+            CONTAINER
+=========================================*/
+
+.container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/*=========================================
+            HEADER
+=========================================*/
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.dashboard-header h1{
+
+    color:#16a34a;
+
+    font-size:34px;
+
+}
+
+.dashboard-header p{
+
+    color:#64748b;
+
+    margin-top:8px;
+
+}
+
+.admin-profile{
+
+    background:white;
+
+    padding:18px 25px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    text-align:center;
+
+}
+
+.admin-profile h3{
+
+    color:#16a34a;
+
+}
+
+.admin-profile span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+/*=========================================
+            SECTION TITLE
+=========================================*/
+
+.section-title{
+
+    margin:25px 0 20px;
+
+    color:#0f172a;
+
+}
+
+/*=========================================
+            DASHBOARD CARDS
+=========================================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 35px rgba(22,163,74,.18);
+
+}
+
+.card h2{
+
+    color:#16a34a;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:#64748b;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+            TABLE
+=========================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+thead{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+th,td{
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+tbody tr{
+
+    border-bottom:1px solid #eee;
+
+}
+
+tbody tr:hover{
+
+    background:#f0fdf4;
+
+}
+
+/*=========================================
+            CHARTS
+=========================================*/
+
+.charts{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.chart-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.chart-card h2{
+
+    margin-bottom:20px;
+
+    color:#16a34a;
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:900px){
+
+.dashboard-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.cards{
+
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+
+}
+
+.charts{
+
+    grid-template-columns:1fr;
+
+}
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+}
